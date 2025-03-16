@@ -25,10 +25,14 @@ const GhibliBackground: React.FC = () => {
           }`}
         >
           <div 
-            className="absolute inset-0 bg-cover bg-center" 
+            className="absolute inset-0"
             style={{ 
               backgroundImage: "url('https://i.imgur.com/RMBGrpt.gif')", 
-              backgroundSize: "cover" 
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+              width: "100%",
+              height: "100%"
             }}
           />
         </div>
@@ -40,10 +44,14 @@ const GhibliBackground: React.FC = () => {
           }`}
         >
           <div 
-            className="absolute inset-0 bg-cover bg-center" 
+            className="absolute inset-0"
             style={{ 
               backgroundImage: "url('https://i.imgur.com/gEYXfV9.gif')", 
-              backgroundSize: "cover" 
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+              width: "100%",
+              height: "100%"
             }}
           />
         </div>
