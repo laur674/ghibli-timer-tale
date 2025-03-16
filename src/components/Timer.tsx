@@ -2,6 +2,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { toast } from "sonner";
 import TimerControls from "./TimerControls";
+import { Button } from "@/components/ui/button";
 
 interface TimerProps {
   initialHours?: number;
@@ -97,7 +98,7 @@ const Timer: React.FC<TimerProps> = ({
   return (
     <div className="flex flex-col items-center justify-center">
       <div 
-        className="mb-8 glassmorphism p-10 rounded-3xl ghibli-shadow animate-slide-up"
+        className="mb-8 howl-timer-display p-10 rounded-3xl"
         style={{ animationDelay: "0.2s" }}
       >
         {isEditing ? (
@@ -130,7 +131,7 @@ const Timer: React.FC<TimerProps> = ({
             />
           </div>
         ) : (
-          <div className="timer-display animate-slide-up">
+          <div className="timer-display animate-slide-up howl-text-glow">
             {formatTime(hours)}:{formatTime(minutes)}:{formatTime(seconds)}
           </div>
         )}
@@ -140,7 +141,7 @@ const Timer: React.FC<TimerProps> = ({
         <Button 
           onClick={toggleEdit}
           variant="ghost"
-          className="mb-4 text-sm text-foreground/70 hover:text-foreground transition-colors"
+          className="mb-4 text-sm howl-button hover:text-foreground transition-colors"
         >
           {isEditing ? "Save" : "Edit Timer"}
         </Button>

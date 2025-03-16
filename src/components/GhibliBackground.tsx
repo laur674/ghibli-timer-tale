@@ -11,9 +11,17 @@ const GhibliBackground: React.FC = () => {
       <div
         className={`absolute inset-0 transition-colors duration-700 ${
           theme === "light"
-            ? "bg-gradient-to-b from-ghibli-blueLight via-ghibli-blue to-ghibli-blue"
+            ? "bg-gradient-to-b from-ghibli-blueLight via-ghibli-beige to-ghibli-brownLight"
             : "bg-gradient-to-b from-ghibli-dark via-ghibli-darkLight to-ghibli-dark"
         }`}
+      />
+
+      {/* Castle silhouette - visible in both modes with different opacity */}
+      <div className="absolute bottom-0 w-full h-1/3 bg-contain bg-bottom bg-no-repeat opacity-20" 
+           style={{ 
+             backgroundImage: "url('https://i.imgur.com/ZIwQFMM.png')",
+             backgroundSize: "contain"
+           }} 
       />
 
       {/* Animated clouds/elements */}
@@ -54,6 +62,14 @@ const GhibliBackground: React.FC = () => {
 
       {/* Subtle texture overlay */}
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1IiBoZWlnaHQ9IjUiPgo8cmVjdCB3aWR0aD0iNSIgaGVpZ2h0PSI1IiBmaWxsPSIjZmZmIiBmaWxsLW9wYWNpdHk9IjAuMDIiPjwvcmVjdD4KPC9zdmc+')] opacity-50"></div>
+      
+      {/* Floating objects - visible in both modes */}
+      <div className="absolute top-20 left-1/4 w-10 h-10 opacity-30 animate-float" style={{ animationDuration: "15s" }}>
+        <div className="w-full h-full bg-contain bg-center bg-no-repeat" style={{ backgroundImage: "url('https://i.imgur.com/qMKfZJw.png')" }}></div>
+      </div>
+      <div className="absolute top-40 right-1/4 w-12 h-12 opacity-30 animate-float" style={{ animationDuration: "18s", animationDelay: "2s" }}>
+        <div className="w-full h-full bg-contain bg-center bg-no-repeat" style={{ backgroundImage: "url('https://i.imgur.com/8MQ1zr7.png')" }}></div>
+      </div>
     </div>
   );
 };
