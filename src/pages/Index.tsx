@@ -13,20 +13,18 @@ const Index = () => {
         <GhibliBackground />
         <ThemeToggle />
         
-        <div className="text-center z-10 animate-fade-in relative">
-          <div className="howl-title-container mb-8">
-            <h1 className="text-4xl md:text-5xl font-bold tracking-tight howl-title">
-              Howl's Timer Castle
-            </h1>
-            <p className="text-lg text-foreground/80 mt-2 max-w-md mx-auto howl-subtitle">
-              A magical timekeeper inspired by Howl's Moving Castle
-            </p>
-          </div>
+        <div className="text-center z-10 animate-fade-in">
+          <h1 className="text-4xl md:text-5xl font-bold mb-2 tracking-tight">
+            Ghibli Timer
+          </h1>
+          <p className="text-lg text-foreground/80 mb-12 max-w-md mx-auto">
+            A gentle timer inspired by Studio Ghibli's magical worlds
+          </p>
           
           <Timer />
           
           <div className="mt-16 text-sm text-foreground/60">
-            <p className="howl-quote">"It's not that you've got no heart. It's just that it's all scrambled up for now."</p>
+            <p>Take a moment to breathe and enjoy the journey</p>
           </div>
         </div>
       </div>

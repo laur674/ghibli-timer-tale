@@ -17,10 +17,10 @@ const TimerControls: React.FC<TimerControlsProps> = ({
   onReset,
 }) => {
   return (
-    <div className="flex items-center justify-center gap-6 mt-6 animate-fade-in">
+    <div className="flex items-center justify-center gap-6 mt-10 animate-fade-in">
       <Button
         onClick={isRunning ? onPause : onStart}
-        className="w-16 h-16 rounded-full howl-control-button button-hover flex items-center justify-center shadow-lg"
+        className="w-16 h-16 rounded-full glassmorphism button-hover flex items-center justify-center shadow-lg"
         variant="ghost"
         aria-label={isRunning ? "Pause timer" : "Start timer"}
       >
@@ -33,7 +33,7 @@ const TimerControls: React.FC<TimerControlsProps> = ({
       
       <Button
         onClick={onReset}
-        className="w-12 h-12 rounded-full howl-control-button button-hover flex items-center justify-center shadow-lg"
+        className="w-12 h-12 rounded-full glassmorphism button-hover flex items-center justify-center shadow-lg"
         variant="ghost"
         aria-label="Reset timer"
       >
