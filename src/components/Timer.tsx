@@ -1,7 +1,7 @@
+
 import React, { useState, useEffect, useRef } from "react";
 import { toast } from "sonner";
 import TimerControls from "./TimerControls";
-import { Button } from "@/components/ui/button";
 
 interface TimerProps {
   initialHours?: number;
@@ -69,6 +69,7 @@ const Timer: React.FC<TimerProps> = ({
 
   const toggleEdit = () => {
     if (isEditing) {
+      // Save the values when we exit edit mode
       const newHours = Math.min(Math.max(0, parseInt(tempHours) || 0), 23);
       const newMinutes = Math.min(Math.max(0, parseInt(tempMinutes) || 0), 59);
       const newSeconds = Math.min(Math.max(0, parseInt(tempSeconds) || 0), 59);
@@ -77,10 +78,12 @@ const Timer: React.FC<TimerProps> = ({
       setMinutes(newMinutes);
       setSeconds(newSeconds);
       
+      // Update initial values for reset
       initialHours = newHours;
       initialMinutes = newMinutes;
       initialSeconds = newSeconds;
     } else {
+      // Set the temp values when we enter edit mode
       setTempHours(hours.toString());
       setTempMinutes(minutes.toString());
       setTempSeconds(seconds.toString());
