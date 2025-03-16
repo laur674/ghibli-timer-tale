@@ -1,13 +1,34 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import React from "react";
+import { ThemeProvider } from "../contexts/ThemeContext";
+import Timer from "../components/Timer";
+import ThemeToggle from "../components/ThemeToggle";
+import GhibliBackground from "../components/GhibliBackground";
+import { Button } from "@/components/ui/button";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
+    <ThemeProvider>
+      <div className="min-h-screen flex flex-col items-center justify-center px-4 py-16 relative">
+        <GhibliBackground />
+        <ThemeToggle />
+        
+        <div className="text-center z-10 animate-fade-in">
+          <h1 className="text-4xl md:text-5xl font-bold mb-2 tracking-tight">
+            Ghibli Timer
+          </h1>
+          <p className="text-lg text-foreground/80 mb-12 max-w-md mx-auto">
+            A gentle timer inspired by Studio Ghibli's magical worlds
+          </p>
+          
+          <Timer />
+          
+          <div className="mt-16 text-sm text-foreground/60">
+            <p>Take a moment to breathe and enjoy the journey</p>
+          </div>
+        </div>
       </div>
-    </div>
+    </ThemeProvider>
   );
 };
 
